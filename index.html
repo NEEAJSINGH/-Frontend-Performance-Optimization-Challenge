@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Performance optimized technology portal demonstrating frontend optimization techniques.">
+  <title>FastFront - Performance Optimized Portal</title>
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#">FastFront</a>
+      <button class="menu-toggle" type="button" aria-expanded="false"
+        aria-controls="primary-nav" aria-label="Open navigation menu">Menu</button>
+      <nav id="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#optimization">Optimization</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Week 4 · Frontend Performance</p>
+          <h1>Build faster websites without sacrificing user experience.</h1>
+          <p class="lead">
+            A self-contained demonstration of image optimization, lazy loading,
+            deferred JavaScript, reduced DOM work, and efficient CSS.
+          </p>
+          <a class="button" href="#articles">Explore performance tips</a>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero.jpg" width="1400" height="700"
+            alt="Illustration representing frontend performance"
+            fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="section" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Performance articles</p>
+          <h2 id="articles-title">Three practical optimization strategies</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="images/article-1.jpg" width="1000" height="650"
+              loading="lazy" decoding="async"
+              alt="Performance measurement concept">
+            <div class="card-body">
+              <h3>Measure before changing code</h3>
+              <p>
+                Use Lighthouse or PageSpeed Insights to identify the resources
+                and execution paths that need attention.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/article-2.jpg" width="1000" height="650"
+              loading="lazy" decoding="async"
+              alt="Optimized asset concept">
+            <div class="card-body">
+              <h3>Keep assets lightweight</h3>
+              <p>
+                Use appropriately sized images, modern formats where supported,
+                and avoid downloading resources that are not immediately needed.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/article-3.jpg" width="1000" height="650"
+              loading="lazy" decoding="async"
+              alt="Smooth user experience concept">
+            <div class="card-body">
+              <h3>Reduce main-thread work</h3>
+              <p>
+                Defer non-critical JavaScript and keep DOM updates small to
+                support faster interaction and smoother rendering.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="optimization" class="section alt">
+      <div class="container narrow">
+        <p class="eyebrow">Optimization checklist</p>
+        <h2>What changed in the optimized build?</h2>
+        <ul class="checklist">
+          <li>Images use explicit dimensions to reduce layout shifts.</li>
+          <li>Below-the-fold images use native lazy loading.</li>
+          <li>Images use asynchronous decoding.</li>
+          <li>Hero image is prioritized because it is above the fold.</li>
+          <li>JavaScript is loaded with <code>defer</code>.</li>
+          <li>CSS uses a compact component structure with no unused framework.</li>
+          <li>DOM complexity is intentionally kept low.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>FastFront · Week 4 Frontend Performance Optimization Challenge</p>
+    </div>
+  </footer>
+</body>
+</html>
